@@ -1,0 +1,4 @@
+playwright==1.47.0
+pyyaml==6.0.2
+google-genai>=1.0.0
+groq>=0.11.0

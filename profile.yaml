@@ -1,0 +1,85 @@
+# ==========================================================================
+# YOUR APPLICATION PROFILE
+# Fill this in with real facts. Every answer the script gives on a form
+# is generated from this file — nothing here should be something you'd be
+# uncomfortable being asked about in an interview.
+# ==========================================================================
+
+target_roles:
+  - "Azure Data Engineer"
+  - "Data Engineer"
+  # add every variant you actually want to be found under
+
+# Controls how strictly a job's title must match the role you searched for.
+# Naukri's own search is loose (e.g. "Azure Data Engineer" can surface
+# "Python API Developer"), so this filter re-checks the title itself.
+# A card is kept only if its title contains at least one of these words.
+# If a role isn't listed here, the script falls back to using the role's
+# own words (minus generic terms like "engineer"/"developer").
+role_required_keywords:
+  "Azure Data Engineer": ["azure", "data"]
+  "Data Engineer": ["data engineer", "data"]
+
+current_city: "Bengaluru"
+relocate_cities: ["Hyderabad", "Pune", "Chennai", "Bengalore", "Mumbai", "Delhi", "Kochi"]          # e.g. ["Hyderabad", "Pune"] — leave empty if you won't relocate
+work_mode: "onsite_or_hybrid"   # onsite_or_hybrid | remote_only | flexible
+night_shift_ok: false
+weekend_ok: false
+
+total_experience_years: 3.4
+current_employer: "Infosys"
+current_title_official: "Senior Process Executive"
+current_title_functional: "Data Engineer"     # what you actually do day to day
+notice_period_days: 30                         # set to your real, current notice period
+immediately_available: false
+
+current_ctc_lpa: 4.66        # fill in real number, in Lakhs Per Annum
+expected_ctc_lpa: 10
+ctc_disclosure_policy: "real_numbers"   # negotiable | real_numbers
+
+highest_qualification: "B.E., PES College of Engineering, Mandya"
+certifications: []           # e.g. ["Microsoft Fabric self-learned", "Azure fundamentals"]
+
+skills_primary:              # things you'd rate yourself strongly on
+  - "Azure Data Factory"
+  - "Databricks"
+  - "PySpark"
+  - "ADLS Gen2"
+  - "SQL"
+  - "Python"
+
+skills_adjacent:             # real but lighter exposure — answer these modestly, never round up
+  - "Microsoft Fabric (Lakehouse, OneLake, Fabric Data Pipelines) — self-learned"
+  - "Snowflake"
+
+work_history_narrative: |
+  Working at Infosys since April 2024 on a Microsoft client engagement, functioning as
+  a data engineer: building and maintaining ETL pipelines in Azure Data Factory,
+  transforming data with PySpark on Databricks, and working with ADLS Gen2 storage.
+  Official Infosys designation is Senior Process Executive, but the actual scope of
+  work is data engineering. Before that, worked as a Trainee Data Engineer at PACECOM
+  Technologies Pvt Ltd (Feb 2023 - Dec 2023).
+  # Replace/extend this with your own words — this is what free-text answers get built from.
+
+company_exclude: ["Infosys"]          # e.g. add "staffing agencies" too — filter rule, not a fact
+company_include_only: []     # leave empty to not restrict
+
+seniority_floor_years: 1
+seniority_ceiling_years: 6
+job_freshness_days: 7          # Naukri's "freshness" filter — only jobs posted in the last N days
+
+salary_floor_lpa: null
+
+stop_after_n_applications: 20
+pace_seconds_between_actions: 12
+
+# How the browser window behaves while running:
+#   "visible"   — normal window, you can watch it (best for early runs / debugging)
+#   "minimized" — a real browser still opens and does everything the same way,
+#                 but starts minimized to the taskbar so it's out of your way
+#   "headless"  — no window at all, fastest, but a genuinely fake/invisible
+#                 browser is somewhat easier for a site to detect as a bot
+#                 than a real (even minimized) one — slightly higher risk
+browser_mode: "minimized"
+
+resume_file_name: "Hemanth_Kumar_N_f.pdf"   # must match the filename already uploaded to Naukri/LinkedIn
