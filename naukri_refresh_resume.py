@@ -46,11 +46,15 @@ def get_current_resume_name(page) -> str | None:
 
 
 def delete_resume(page) -> bool:
-    """Clicks the delete icon and handles a confirmation dialog if one appears.
-    Naukri's confirm dialog markup hasn't been confirmed yet -- this tries a
-    few common patterns (Yes/Delete/Confirm buttons). If deletion doesn't
-    actually happen, send me a screenshot of what appears after the click
-    and I'll make this exact instead of a guess."""
+    """Clicks the delete icon and confirms via the resume-specific dialog.
+
+    Confirmed real markup: the confirmation box has class
+    "confirmationBox profileSummaryConfirmation" with a Delete button
+    (class "btn-dark-ot") inside it. Scoping the click to specifically
+    that box -- rather than searching the whole page for any button whose
+    text says "Delete" -- is what fixes it from also triggering the
+    profile-photo delete button, which apparently sits in the page's DOM
+    too and could get matched by a page-wide text search."""
     locator = page.locator(DELETE_SELECTOR).first
     try:
         locator.click(timeout=8000)
@@ -61,18 +65,18 @@ def delete_resume(page) -> bool:
 
     clicked_confirm = safe_evaluate(page, """
         () => {
-            const texts = ['yes', 'delete', 'confirm', 'ok', 'remove'];
-            const btns = Array.from(document.querySelectorAll('button, div[role="button"], a'));
-            const btn = btns.find(b => {
-                const t = (b.innerText || '').trim().toLowerCase();
-                return texts.includes(t);
-            });
-            if (btn) { btn.click(); return true; }
-            return false;
+            const box = document.querySelector('.confirmationBox.profileSummaryConfirmation');
+            if (!box) return false;
+            const btn = box.querySelector('button.btn-dark-ot');
+            if (!btn) return false;
+            btn.click();
+            return true;
         }
     """, default=False)
     if clicked_confirm:
-        print("  Confirmed deletion via dialog.")
+        print("  Confirmed deletion via the resume dialog.")
+    else:
+        print("  No resume confirmation dialog appeared (may have deleted directly, or nothing to delete).")
     time.sleep(2)
     return True
 

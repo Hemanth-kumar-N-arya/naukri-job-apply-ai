@@ -28,6 +28,7 @@ LOG_FILE = "applications_log.csv"
 STOP_PHRASES = [
     "too many requests", "unusual activity", "verify you are human",
     "captcha", "temporarily blocked", "please try again later and reduce",
+    "there was an error while processing your request",
 ]
 
 # Questions matching any of these should NEVER be answered by the LLM --
@@ -153,13 +154,18 @@ def _js_click_send(page) -> bool:
     """, default=False)
 
 
-def click_native_apply(page):
-    safe_evaluate(page, """
+def click_native_apply(page) -> bool:
+    """Clicks the Apply button and returns whether the click actually
+    registered, so the caller can tell 'click failed' apart from 'clicked
+    fine, just couldn't confirm success afterward' -- those need different
+    handling."""
+    return bool(safe_evaluate(page, """
         () => {
             const btn = document.getElementById('apply-button');
-            if (btn) btn.click();
+            if (btn) { btn.click(); return true; }
+            return false;
         }
-    """)
+    """, default=False))
 
 
 def page_has_stop_signal(page) -> str | None:
@@ -175,13 +181,35 @@ def page_has_stop_signal(page) -> str | None:
     return None
 
 
+def _save_debug_screenshot(page, job_title: str) -> str:
+    """Saves a screenshot when the outcome is uncertain, so it can be looked
+    at afterward instead of needing to catch it live. Also saves the page's
+    HTML for the same reason — a screenshot shows what it looked like, the
+    HTML shows exactly why the confirmation-text check missed it."""
+    debug_dir = Path("debug_screenshots")
+    debug_dir.mkdir(exist_ok=True)
+    safe_name = "".join(c if c.isalnum() else "_" for c in (job_title or "unknown"))[:60]
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    png_path = debug_dir / f"{safe_name}_{timestamp}.png"
+    html_path = debug_dir / f"{safe_name}_{timestamp}.html"
+    try:
+        page.screenshot(path=str(png_path))
+    except Exception as e:
+        print(f"  (couldn't save debug screenshot: {e})")
+    try:
+        html_path.write_text(page.content())
+    except Exception as e:
+        print(f"  (couldn't save debug HTML: {e})")
+    return str(png_path)
+
+
 def verify_applied(page) -> bool:
     """Best-effort check that the application actually went through. Confirmed
     real pattern: Naukri shows a green checkmark panel reading
     'Applied to "<job title>"' a few seconds after submit -- checking for
     that prefix specifically, plus a short wait since it isn't instant."""
     try:
-        page.wait_for_timeout(3000)  # the confirmation panel takes a moment to appear
+        page.wait_for_timeout(2000)  # the confirmation panel takes a moment to appear
     except Exception:
         pass
     try:
@@ -256,7 +284,39 @@ def _is_sensitive_field(question: str) -> bool:
     return any(hint in lower_q for hint in SENSITIVE_FIELD_HINTS)
 
 
-def _handle_options_question(page, question: str, timeout_s: int) -> bool:
+def _auto_decide_option(question: str, options: list[dict], profile: Profile) -> dict | None:
+    """Tries to pick the correct option using known profile facts, for
+    common Yes/No-style questions. Returns None (never guesses) if nothing
+    in the profile clearly answers this specific question -- caller falls
+    back to asking you directly rather than risk a wrong click."""
+    lower_q = question.lower()
+    by_label = {o["idx"]: o["label"].strip().lower() for o in options}
+
+    def find_by_text(text: str):
+        for idx, label in by_label.items():
+            if label == text.lower():
+                return next(o for o in options if o["idx"] == idx)
+        return None
+
+    rules = [
+        (["relocate", "relocation", "willing to move"],
+         "Yes" if profile.data.get("relocate_cities") else "No"),
+        (["night shift"], "Yes" if profile.data.get("night_shift_ok") else "No"),
+        (["weekend"], "Yes" if profile.data.get("weekend_ok") else "No"),
+        (["immediately available", "immediate joiner"],
+         "Yes" if profile.data.get("immediately_available") else "No"),
+        (["currently employed", "currently working"],
+         "Yes" if profile.data.get("current_employer") else "No"),
+    ]
+    for triggers, desired in rules:
+        if any(t in lower_q for t in triggers):
+            match = find_by_text(desired)
+            if match:
+                return match
+    return None
+
+
+def _handle_options_question(page, question: str, profile: Profile, timeout_s: int) -> bool:
     """Returns True if handled (clicked something), raises SkipJob otherwise."""
     options = _get_options(page)
     if not options:
@@ -270,34 +330,118 @@ def _handle_options_question(page, question: str, timeout_s: int) -> bool:
                 print(f"  (used a remembered answer for: {question[:80]})")
                 return True
 
+    auto = _auto_decide_option(question, options, profile)
+    if auto:
+        _click_option(page, auto["idx"])
+        learned_answers.save_answer(question, auto["label"])
+        print(f"  (auto-picked '{auto['label']}' from your profile for: {question[:80]})")
+        return True
+
     options_text = "\n".join(f"  {o['idx']}: {o['label']}" for o in options)
     response = ask_user(
         f"Screening question needs a choice:\n{question}\n\nOptions:\n{options_text}\n"
-        f"Type the number of your choice:",
+        f"Type the number of your choice (or numbers separated by commas for multi-select):",
         timeout_seconds=timeout_s,
     )
     if response is None:
         raise SkipJob(f"no response for options question: {question[:120]}")
 
-    try:
-        chosen_idx = int(response.strip())
-        match = next((o for o in options if o["idx"] == chosen_idx), None)
-    except ValueError:
-        match = next((o for o in options if o["label"].strip().lower() == response.strip().lower()), None)
+    chosen_raw = [r.strip() for r in response.split(",") if r.strip()]
+    matches = []
+    for r in chosen_raw:
+        try:
+            idx = int(r)
+            match = next((o for o in options if o["idx"] == idx), None)
+        except ValueError:
+            match = next((o for o in options if o["label"].strip().lower() == r.lower()), None)
+        if match:
+            matches.append(match)
 
-    if not match:
+    if not matches:
         raise SkipJob(f"couldn't match your response '{response}' to an option: {question[:120]}")
 
-    _click_option(page, match["idx"])
-    learned_answers.save_answer(question, match["label"])
+    for match in matches:
+        _click_option(page, match["idx"])
+    learned_answers.save_answer(question, matches[0]["label"] if len(matches) == 1 else response)
     return True
+
+
+# If the chat's last message is one of these, it's wrapping up rather than
+# asking something new -- stop cleanly instead of trying to draft an answer
+# into a box that may no longer exist.
+COMPLETION_PHRASES = [
+    "thank you", "thanks for your response", "thanks for your time",
+    "we will get back", "responses have been recorded", "no further questions",
+    "application submitted", "that's all", "all the information we need",
+]
+
+
+def _is_completion_message(text: str) -> bool:
+    lower = text.lower()
+    return any(p in lower for p in COMPLETION_PHRASES)
+
+
+def _has_answerable_input(page, timeout_ms: int = 3000) -> bool:
+    """Checks for a text box or radio/checkbox to answer. Polls for up to
+    timeout_ms instead of checking once -- the previous single-check version
+    could wrongly conclude "nothing to answer" if the next question's input
+    just hadn't rendered yet after the previous Save click, causing it to
+    skip clicking Save on what was actually still a real question."""
+    waited = 0
+    step = 300
+    while waited <= timeout_ms:
+        found = safe_evaluate(page, """
+            () => !!(document.querySelector('[id^="userInput"], [contenteditable="true"]') ||
+                     document.querySelector('input[type=radio], input[type=checkbox]'))
+        """, default=False)
+        if found:
+            return True
+        time.sleep(step / 1000)
+        waited += step
+    return False
+
+
+def _read_filled_text(page) -> str:
+    return safe_evaluate(page, """
+        () => {
+            const ed = document.querySelector('[id^="userInput"], [contenteditable="true"]');
+            return ed ? (ed.innerText || ed.textContent || '').trim() : '';
+        }
+    """, default="") or ""
+
+
+def _fill_and_send(page, text: str, question: str):
+    """Fills the answer box, VERIFIES the text actually landed before
+    clicking Send, then sends. This is the fix for answers going through
+    blank: previously Send could fire even if the fill silently failed
+    (a timing hiccup, or the box wasn't there), which is what produces
+    Naukri's "incomplete information" rejection on the final application."""
+    _fill_freetext(page, text)
+    time.sleep(0.4)
+    filled = _read_filled_text(page)
+    if not filled:
+        _fill_freetext(page, text)  # one retry -- could be a focus/timing hiccup
+        time.sleep(0.6)
+        filled = _read_filled_text(page)
+    if not filled:
+        raise SkipJob(f"couldn't confirm the answer registered before sending: {question[:120]}")
+    _js_click_send(page)
+    time.sleep(2.0)  # give Naukri's backend a moment to actually save it
 
 
 def answer_screening_chat(page, profile: Profile, job_context: str, timeout_s: int):
     """Handles Naukri's post-apply screening chat drawer, if it appears."""
     answers = profile.answer_library()
     try:
-        page.wait_for_selector('[contenteditable="true"], [contenteditable=""]', timeout=4000)
+        # Broadened on purpose: a pure radio/checkbox question has no text
+        # box at all, so waiting only for contenteditable was causing the
+        # function to give up immediately on those questions, thinking
+        # there was no screening chat when there actually was one.
+        page.wait_for_selector(
+            '[contenteditable="true"], [contenteditable=""], '
+            'input[type=radio], input[type=checkbox], .botMsg',
+            timeout=3000,
+        )
     except PWTimeout:
         return  # no screening chat for this listing
 
@@ -316,19 +460,24 @@ def answer_screening_chat(page, profile: Profile, job_context: str, timeout_s: i
         if not question:
             break
 
+        if _is_completion_message(question):
+            time.sleep(1.5)  # let the "Applied" confirmation redirect begin before we check for it
+            break  # chat is wrapping up, not asking a new question
+
+        if not _has_answerable_input(page):
+            break  # nothing to fill or click here — informational message only
+
         options = _get_options(page)
         if options:
-            _handle_options_question(page, question, timeout_s)
+            _handle_options_question(page, question, profile, timeout_s)
             _js_click_send(page)
-            time.sleep(1.5)
+            time.sleep(2.0)
             continue
 
         stored = learned_answers.get_answer(question)
         if stored:
-            _fill_freetext(page, stored)
+            _fill_and_send(page, stored, question)
             print(f"  (used a remembered answer for: {question[:80]})")
-            _js_click_send(page)
-            time.sleep(1.5)
             continue
 
         lower_q = question.lower()
@@ -337,23 +486,19 @@ def answer_screening_chat(page, profile: Profile, job_context: str, timeout_s: i
             if key not in answers:
                 continue
             if any(phrase in lower_q for phrase in phrases):
-                _fill_freetext(page, str(answers[key]))
+                _fill_and_send(page, str(answers[key]), question)
                 answered = True
                 break
 
         if answered:
-            _js_click_send(page)
-            time.sleep(1.5)
             continue
 
         if _is_sensitive_field(question):
             response = ask_user(f"Screening question (personal detail):\n{question}", timeout_seconds=timeout_s)
             if response is None:
                 raise SkipJob(f"no response for sensitive field: {question[:120]}")
-            _fill_freetext(page, response)
+            _fill_and_send(page, response, question)
             learned_answers.save_answer(question, response)
-            _js_click_send(page)
-            time.sleep(1.5)
             continue
 
         draft = llm.draft_answer(question, profile.data, job_context)
@@ -362,13 +507,10 @@ def answer_screening_chat(page, profile: Profile, job_context: str, timeout_s: i
                                  timeout_seconds=timeout_s)
             if response is None:
                 raise SkipJob(f"no response for: {question[:120]}")
-            _fill_freetext(page, response)
+            _fill_and_send(page, response, question)
             learned_answers.save_answer(question, response)
         else:
-            _fill_freetext(page, draft)
-
-        _js_click_send(page)
-        time.sleep(1.5)
+            _fill_and_send(page, draft, question)
 
 
 def _fill_freetext(page, text: str):
@@ -482,7 +624,12 @@ def run():
                             print(f"Skipped: {card.get('title')} @ {card.get('company')} — no apply button found")
                             continue
 
-                        click_native_apply(page)
+                        clicked = click_native_apply(page)
+                        if not clicked:
+                            log_row([datetime.now(), "naukri", card.get("title"),
+                                      card.get("company"), "skipped", "apply button click didn't register"])
+                            print(f"Skipped: {card.get('title')} @ {card.get('company')} — apply click didn't register")
+                            continue
                         time.sleep(2)
 
                         answer_screening_chat(page, profile, f"{card.get('title')} at {card.get('company')}",
@@ -495,9 +642,10 @@ def run():
                                       card.get("company"), "applied", ""])
                             print(f"Applied: {card.get('title')} @ {card.get('company')} ({applied} total)")
                         else:
+                            shot_path = _save_debug_screenshot(page, card.get("title"))
                             log_row([datetime.now(), "naukri", card.get("title"),
                                       card.get("company"), "uncertain",
-                                      "couldn't confirm submission — please check this one manually"])
+                                      f"couldn't confirm submission — screenshot saved to {shot_path}"])
                             print(f"UNCERTAIN: {card.get('title')} @ {card.get('company')} — "
                                   f"couldn't confirm the application actually went through. Check it manually.")
 

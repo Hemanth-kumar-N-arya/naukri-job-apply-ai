@@ -8,6 +8,8 @@
 target_roles:
   - "Azure Data Engineer"
   - "Data Engineer"
+  - "Fabric Data Engineer"
+  - "ETL Developer"
   # add every variant you actually want to be found under
 
 # Controls how strictly a job's title must match the role you searched for.
@@ -18,8 +20,9 @@ target_roles:
 # own words (minus generic terms like "engineer"/"developer").
 role_required_keywords:
   "Azure Data Engineer": ["data engineer", "azure data"]
-  "Data Engineer": ["data engineer"]
-
+  "Data Engineer": ["data engineer", "fabric"]
+  "Fabric Data Engineer": ["fabric", "data"]
+  "ETL Developer": ["etl", "data integration"]
 current_city: "Bengaluru"
 relocate_cities: ["Hyderabad", "Pune", "Chennai", "Bengalore", "Mumbai", "Delhi", "Kochi"]          # e.g. ["Hyderabad", "Pune"] — leave empty if you won't relocate
 work_mode: "onsite_or_hybrid"   # onsite_or_hybrid | remote_only | flexible
@@ -66,7 +69,7 @@ company_include_only: []     # leave empty to not restrict
 
 seniority_floor_years: 1
 seniority_ceiling_years: 6
-job_freshness_days: 3          # Naukri's "freshness" filter — only jobs posted in the last N days
+job_freshness_days: 1          # Naukri's "freshness" filter — only jobs posted in the last N days
 
 salary_floor_lpa: null
 
@@ -81,7 +84,7 @@ human_input_timeout_seconds: 120
 
 # How many search-result pages to go through per role before moving to the
 # next role (or stopping, if stop_after_n_applications is reached first).
-max_pages_per_role: 5
+max_pages_per_role: 1
 
 # How the browser window behaves while running:
 #   "visible"   — normal window, you can watch it (best for early runs / debugging)
