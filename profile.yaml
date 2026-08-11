@@ -17,8 +17,8 @@ target_roles:
 # If a role isn't listed here, the script falls back to using the role's
 # own words (minus generic terms like "engineer"/"developer").
 role_required_keywords:
-  "Azure Data Engineer": ["azure", "data"]
-  "Data Engineer": ["data engineer", "data"]
+  "Azure Data Engineer": ["data engineer", "azure data"]
+  "Data Engineer": ["data engineer"]
 
 current_city: "Bengaluru"
 relocate_cities: ["Hyderabad", "Pune", "Chennai", "Bengalore", "Mumbai", "Delhi", "Kochi"]          # e.g. ["Hyderabad", "Pune"] — leave empty if you won't relocate
@@ -28,7 +28,7 @@ weekend_ok: false
 
 total_experience_years: 3.4
 current_employer: "Infosys"
-current_title_official: "Senior Process Executive"
+current_title_official: "Data Engineer"
 current_title_functional: "Data Engineer"     # what you actually do day to day
 notice_period_days: 30                         # set to your real, current notice period
 immediately_available: false
@@ -66,12 +66,22 @@ company_include_only: []     # leave empty to not restrict
 
 seniority_floor_years: 1
 seniority_ceiling_years: 6
-job_freshness_days: 7          # Naukri's "freshness" filter — only jobs posted in the last N days
+job_freshness_days: 3          # Naukri's "freshness" filter — only jobs posted in the last N days
 
 salary_floor_lpa: null
 
 stop_after_n_applications: 20
 pace_seconds_between_actions: 12
+
+# How long to wait for you to type an answer when the script hits a
+# question it can't answer safely on its own (personal details like DOB,
+# or anything the AI genuinely doesn't know from your profile). If you
+# don't respond in time, that one listing is skipped -- the run continues.
+human_input_timeout_seconds: 120
+
+# How many search-result pages to go through per role before moving to the
+# next role (or stopping, if stop_after_n_applications is reached first).
+max_pages_per_role: 5
 
 # How the browser window behaves while running:
 #   "visible"   — normal window, you can watch it (best for early runs / debugging)
@@ -82,4 +92,4 @@ pace_seconds_between_actions: 12
 #                 than a real (even minimized) one — slightly higher risk
 browser_mode: "minimized"
 
-resume_file_name: "Hemanth_Kumar_N_f.pdf"   # must match the filename already uploaded to Naukri/LinkedIn
+resume_file_name: "Hemanth_Kumar_N_f.pdf"   # must match the filename already uploaded to Naukri/LinkedIn, and sit in this same project folder
