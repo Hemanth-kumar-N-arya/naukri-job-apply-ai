@@ -22,9 +22,15 @@ PROFILE_URL = "https://www.naukri.com/mnjuser/profile"
 # Confirmed real markup (from your Naukri profile page):
 #   Delete icon:  <span data-title="delete-resume">...</span>
 #   Upload input: <input type="file" id="attachCV">
-DELETE_SELECTOR = '[data-title="delete-resume"]'
-UPLOAD_SELECTOR = '#attachCV'
-RESUME_NAME_SELECTOR = '.resume-name-inline'
+# Scoped to .attachCV specifically -- that's the real container wrapping the
+# whole resume block (confirmed from your page's markup). Scoping the delete
+# click to inside this container, rather than a bare page-wide data-title
+# match, is what prevents it from ever being able to touch the profile
+# photo section or anything else on the page, even if Naukri happens to
+# reuse similar icon markup elsewhere.
+DELETE_SELECTOR = '.attachCV [data-title="delete-resume"]'
+UPLOAD_SELECTOR = '.attachCV #attachCV'
+RESUME_NAME_SELECTOR = '.attachCV .resume-name-inline'
 
 
 def safe_evaluate(page, script, arg=None, default=None):
