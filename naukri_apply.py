@@ -140,6 +140,31 @@ def check_apply_button(page) -> str:
     return "none"
 
 
+def _wait_send_enabled(page, timeout_ms: int = 4000) -> bool:
+    """Polls until the Send control's wrapper no longer has Naukri's
+    'disabled' class. Confirmed real markup (from a debug HTML dump you
+    sent): <div id="sendMsg__..." class="send disabled"> wraps the
+    clickable <div class="sendMsg">Save</div>. It starts disabled and only
+    becomes clickable after Naukri's frontend registers your selection and
+    re-renders -- clicking Send before that happens is a silent no-op,
+    which is what was causing radio/checkbox answers to never actually save."""
+    waited = 0
+    step = 300
+    while waited <= timeout_ms:
+        enabled = safe_evaluate(page, """
+            () => {
+                const wrapper = document.querySelector('[id^="sendMsg__"]');
+                if (!wrapper) return true;  // no wrapper found -- don't block forever on a guess
+                return !wrapper.className.includes('disabled');
+            }
+        """, default=True)
+        if enabled:
+            return True
+        time.sleep(step / 1000)
+        waited += step
+    return False
+
+
 def _js_click_send(page) -> bool:
     """Clicks Naukri's screening-chat Send/Save control -- a <div class="sendMsg">,
     not a <button>. A JS click bypasses the chatbot_Overlay div that sits
@@ -209,7 +234,7 @@ def verify_applied(page) -> bool:
     'Applied to "<job title>"' a few seconds after submit -- checking for
     that prefix specifically, plus a short wait since it isn't instant."""
     try:
-        page.wait_for_timeout(2000)  # the confirmation panel takes a moment to appear
+        page.wait_for_timeout(3000)  # the confirmation panel takes a moment to appear
     except Exception:
         pass
     try:
@@ -425,6 +450,7 @@ def _fill_and_send(page, text: str, question: str):
         filled = _read_filled_text(page)
     if not filled:
         raise SkipJob(f"couldn't confirm the answer registered before sending: {question[:120]}")
+    _wait_send_enabled(page)  # same disabled-until-registered pattern as the options branch
     _js_click_send(page)
     time.sleep(2.0)  # give Naukri's backend a moment to actually save it
 
@@ -440,7 +466,7 @@ def answer_screening_chat(page, profile: Profile, job_context: str, timeout_s: i
         page.wait_for_selector(
             '[contenteditable="true"], [contenteditable=""], '
             'input[type=radio], input[type=checkbox], .botMsg',
-            timeout=3000,
+            timeout=4000,
         )
     except PWTimeout:
         return  # no screening chat for this listing
@@ -470,6 +496,9 @@ def answer_screening_chat(page, profile: Profile, job_context: str, timeout_s: i
         options = _get_options(page)
         if options:
             _handle_options_question(page, question, profile, timeout_s)
+            if not _wait_send_enabled(page):
+                raise SkipJob(f"Send button stayed disabled after selecting an option "
+                               f"(selection may not have registered): {question[:120]}")
             _js_click_send(page)
             time.sleep(2.0)
             continue

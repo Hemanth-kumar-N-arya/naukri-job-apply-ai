@@ -25,7 +25,7 @@ role_required_keywords:
   "ETL Developer": ["etl", "data integration"]
 current_city: "Bengaluru"
 relocate_cities: ["Hyderabad", "Pune", "Chennai", "Bengalore", "Mumbai", "Delhi", "Kochi"]          # e.g. ["Hyderabad", "Pune"] — leave empty if you won't relocate
-work_mode: "onsite_or_hybrid"   # onsite_or_hybrid | remote_only | flexible
+work_mode: "flexible"   # onsite_or_hybrid | remote_only | flexible
 night_shift_ok: false
 weekend_ok: false
 
@@ -33,7 +33,7 @@ total_experience_years: 3.4
 current_employer: "Infosys"
 current_title_official: "Data Engineer"
 current_title_functional: "Data Engineer"     # what you actually do day to day
-notice_period_days: 30                         # set to your real, current notice period
+notice_period_days: 15                         # set to your real, current notice period
 immediately_available: false
 
 current_ctc_lpa: 4.66        # fill in real number, in Lakhs Per Annum
@@ -69,7 +69,7 @@ company_include_only: []     # leave empty to not restrict
 
 seniority_floor_years: 1
 seniority_ceiling_years: 6
-job_freshness_days: 1          # Naukri's "freshness" filter — only jobs posted in the last N days
+job_freshness_days: 7          # Naukri's "freshness" filter — only jobs posted in the last N days
 
 salary_floor_lpa: null
 
@@ -84,7 +84,7 @@ human_input_timeout_seconds: 120
 
 # How many search-result pages to go through per role before moving to the
 # next role (or stopping, if stop_after_n_applications is reached first).
-max_pages_per_role: 1
+max_pages_per_role: 2
 
 # How the browser window behaves while running:
 #   "visible"   — normal window, you can watch it (best for early runs / debugging)
