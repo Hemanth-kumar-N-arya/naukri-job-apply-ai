@@ -1,0 +1,89 @@
+# ==========================================================================
+# YOUR APPLICATION PROFILE
+# Copy this file to profile.yaml (that filename is gitignored, so your real
+# details never get committed) and fill it in with real facts. Every answer
+# the script gives on a form is generated from this file -- nothing here
+# should be something you'd be uncomfortable being asked about in an
+# interview.
+# ==========================================================================
+
+target_roles:
+  - "Data Engineer"
+  - "Backend Developer"
+  # add every role variant you actually want to be found under
+
+# Controls how strictly a job's title must match the role you searched for.
+# Naukri's own search is loose (e.g. "Data Engineer" can surface completely
+# unrelated titles), so this filter re-checks the title itself. A card is
+# kept only if its title contains at least one of these words. If a role
+# isn't listed here, the script falls back to using the role's own words
+# (minus generic terms like "engineer"/"developer").
+role_required_keywords:
+  "Data Engineer": ["data engineer"]
+  "Backend Developer": ["backend developer", "backend engineer"]
+
+current_city: "Bengaluru"
+relocate_cities: []          # e.g. ["Hyderabad", "Pune"] -- leave empty if you won't relocate
+work_mode: "onsite_or_hybrid"   # onsite_or_hybrid | remote_only | flexible
+night_shift_ok: false
+weekend_ok: false
+
+total_experience_years: 0
+current_employer: "Your Company Name"
+current_title_official: "Your Official Title"
+current_title_functional: "What you actually do day to day"
+notice_period_days: 30                         # set to your real, current notice period
+immediately_available: false
+
+current_ctc_lpa: null        # fill in your real number, in Lakhs Per Annum
+expected_ctc_lpa: null
+ctc_disclosure_policy: "negotiable"   # negotiable | real_numbers
+
+highest_qualification: "Your degree, Your college"
+certifications: []           # e.g. ["AWS Certified Developer", "Azure Fundamentals"]
+
+skills_primary:              # things you'd rate yourself strongly on
+  - "Skill 1"
+  - "Skill 2"
+
+skills_adjacent:             # real but lighter exposure -- answer these modestly, never round up
+  - "Skill you've self-studied or have light exposure to"
+
+work_history_narrative: |
+  Write 2-4 sentences in your own words describing your actual work
+  history and what you do. This is what free-text screening answers get
+  built from, so be specific and honest -- the AI won't invent anything
+  beyond what's written here.
+
+company_exclude: []          # e.g. ["Your Current Employer"] -- filter rule, not a fact
+company_include_only: []     # leave empty to not restrict
+
+seniority_floor_years: 0
+seniority_ceiling_years: 5
+job_freshness_days: 3          # Naukri's "freshness" filter -- only jobs posted in the last N days
+
+salary_floor_lpa: null
+
+stop_after_n_applications: 20
+pace_seconds_between_actions: 30
+
+# How long to wait for you to type an answer when the script hits a
+# question it can't answer safely on its own (personal details like DOB,
+# or anything the AI genuinely doesn't know from your profile). If you
+# don't respond in time, that one listing is skipped -- the run continues.
+human_input_timeout_seconds: 120
+
+# How many search-result pages to go through per role before moving to the
+# next role (or stopping, if stop_after_n_applications is reached first).
+max_pages_per_role: 5
+
+# How the browser window behaves while running:
+#   "visible"   -- normal window, you can watch it (best for early runs / debugging)
+#   "minimized" -- a real browser still opens and does everything the same way,
+#                  but starts minimized to the taskbar so it's out of your way
+#   "headless"  -- no window at all, fastest, but a genuinely fake/invisible
+#                  browser is somewhat easier for a site to detect as a bot
+#                  than a real (even minimized) one -- slightly higher risk
+browser_mode: "minimized"
+
+resume_file_name: "your_resume.pdf"   # must match the filename already uploaded to Naukri/LinkedIn, and sit in this same project folder
