@@ -69,7 +69,7 @@ company_include_only: []     # leave empty to not restrict
 
 seniority_floor_years: 1
 seniority_ceiling_years: 6
-job_freshness_days: 7          # Naukri's "freshness" filter — only jobs posted in the last N days
+job_freshness_days: 1          # Naukri's "freshness" filter — only jobs posted in the last N days
 
 salary_floor_lpa: null
 

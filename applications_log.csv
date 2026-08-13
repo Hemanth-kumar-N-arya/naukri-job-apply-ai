@@ -2245,3 +2245,340 @@ timestamp,source,title,company,status,reason
 2026-08-12 07:00:10.789287,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
 2026-08-12 07:00:10.796290,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
 2026-08-12 07:00:10.802287,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-13 06:59:53.825867,naukri,Azure Data Engineer,Brigosha Technologies,skipped,external apply
+2026-08-13 06:59:57.198114,naukri,Data Engineer,Quantanxt Technologies,skipped,external apply
+2026-08-13 06:59:57.208157,naukri,Databricks Engineer,Ajanta Pharma,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 06:59:57.220209,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-13 07:00:00.004520,naukri,Consultant - Data Engineer,HCA Healthcare Uk,skipped,external apply
+2026-08-13 07:00:03.126404,naukri,Azure Data Engineer,Paltech,skipped,external apply
+2026-08-13 07:00:03.138983,naukri,Snowflake Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-13 07:00:03.155553,naukri,Databricks(2-5 yrs)-Pan India,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:03.176234,naukri,Data Analyst,Ecolab Global Services,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:03.188861,naukri,AWS Bedrock / Azure OpenAI Developer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:03.197924,naukri,Azure Developer,Carnation Infotech,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:06.121917,naukri,Azure Data Platform Engineer,UST,skipped,external apply
+2026-08-13 07:00:06.135822,naukri,Data analyst,IBU Consulting,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:08.984565,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:00:09.004667,naukri,Palantir Foundry Developer,Code Vyasa,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:09.014745,naukri,Sentinel Ops Engineer,Jio platforms,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:09.039372,naukri,GN-I&E-Utilities- Data Architect-Analyst,Accenture,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:09.089670,naukri,MLOps Engineer,Deepspatial,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:09.104228,naukri,Fullstack software developer,Kyndryl,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:09.185211,naukri,"Engineer, LLM Ops",Alegeus,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:18.076939,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:00:21.136552,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:00:24.109169,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:00:27.195711,naukri,Data Engineer,Tatpata,skipped,external apply
+2026-08-13 07:00:30.242679,naukri,Data Engineer,Tatpata,skipped,external apply
+2026-08-13 07:00:33.018211,naukri,Data Engineer,Tatpata,skipped,external apply
+2026-08-13 07:00:35.970434,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:00:38.857490,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:00:41.825998,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:00:41.836058,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.849154,naukri,BI Engineer,Codincity Digital Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.860722,naukri,Python LLM + Gen Ai Developer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.871808,naukri,Python + ML + MLOps,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.885368,naukri,Python Automation Test Engineer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.899472,naukri,Data Analyst-Analyst,FedEx,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.943694,naukri,Senior Software Engineer,Infinite,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.955278,naukri,Python+ML+MLOPS -Pan India(3-5yrs),Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:41.978968,naukri,Python+ML+MLOPS -Pan India(3-5yrs),Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:42.012106,naukri,Gen AI Developer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:42.083232,naukri,Technical Lead,Dentsu Webchutney,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:00:49.771963,naukri,Data Engineer,Quantanxt Technologies,skipped,external apply
+2026-08-13 07:00:52.368560,naukri,Data Engineer,Valuedx Technologies,skipped,external apply
+2026-08-13 07:00:55.715338,naukri,Advanced Data Engineer,Sparta Systems,skipped,external apply
+2026-08-13 07:00:55.727920,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-13 07:00:58.734452,naukri,Consultant - Data Engineer,HCA Healthcare Uk,skipped,external apply
+2026-08-13 07:01:01.704142,naukri,Data Engineer / Analyst,Naghavi Fintech,skipped,external apply
+2026-08-13 07:01:04.815734,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:01:07.762285,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:01:18.663094,naukri,Data Engineer,Principal Financial Group,uncertain,couldn't confirm submission — screenshot saved to debug_screenshots\Data_Engineer_20260813_070118.png
+2026-08-13 07:01:33.717318,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:01:36.368029,naukri,Data Engineer,Tatpata,skipped,external apply
+2026-08-13 07:01:38.950989,naukri,Data Engineer,Tatpata,skipped,external apply
+2026-08-13 07:01:41.881779,naukri,Data Engineer,Tatpata,skipped,external apply
+2026-08-13 07:01:44.671683,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:01:47.521101,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:01:50.275209,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:01:53.000402,naukri,Data Engineer - Apache Spark,Cisco,skipped,external apply
+2026-08-13 07:01:56.162913,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:01:59.047237,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:02:02.182605,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:54:21.524261,naukri,Databricks Engineer,Ajanta Pharma,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:54:34.907171,naukri,Data Engineer (Scala)-Developer,Nasu Group,applied,
+2026-08-13 07:54:49.787855,naukri,Azure Data Engineer,Paltech,skipped,external apply
+2026-08-13 07:54:52.725112,naukri,Senior Data Engineer,Crisil,skipped,external apply
+2026-08-13 07:54:52.738145,naukri,Databricks(2-5 yrs)-Pan India,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:54:52.747207,naukri,Data Analyst,Ecolab Global Services,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:55:06.371989,naukri,Senior Data Engineer,Narayana Health (NH),applied,
+2026-08-13 07:55:18.382230,naukri,Java Developer-Azure Cloud,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:55:34.084117,naukri,Data Engineer (Scala)-Jr.Engineer,Nasu Group,applied,
+2026-08-13 07:55:48.945842,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 07:56:34.808334,naukri,Data Engineer,Hiringhood,applied,
+2026-08-13 07:56:46.822754,naukri,Palantir Foundry Developer,Code Vyasa,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.836358,naukri,BI Engineer,Codincity Digital Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.850441,naukri,Python AI Engineer,Soliton Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.864632,naukri,Data Analyst-Analyst,FedEx,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.875317,naukri,AI/ML Developer (LLMs & Prompt Engineering) – Python & AI,Razorthink,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.894021,naukri,Senior Software Engineer,Infinite,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.905125,naukri,Gen AI Developer,Capgemini,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.918240,naukri,Fullstack software developer,Kyndryl,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:46.949324,naukri,Technical Lead,Dentsu Webchutney,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:55.568353,naukri,Data Engineer II,Swiss Re,skipped,external apply
+2026-08-13 07:56:55.580411,naukri,"Staff Data Scientist 1 - Machine Learning,Deep Learning,Python",Blue Yonder,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:56:58.543358,naukri,Senior Data Engineer,Serko,skipped,external apply
+2026-08-13 07:57:01.650919,naukri,Data Engineer,EY,skipped,external apply
+2026-08-13 07:57:01.669554,naukri,Business Process Analyst Manager,Ecolab Global Services,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 07:57:16.223216,naukri,Opening For Snowflake Data Engineer,Magellanic Cloud,applied,
+2026-08-13 07:59:51.735255,naukri,Data Engineer,Norwin Technologies,applied,
+2026-08-13 08:00:03.749193,naukri,SSIS Developer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:03.762217,naukri,QA Backend -SQL - ETL - India - Remote,Relq Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.497823,naukri,"Senior/ Data Engineer - Integration Lead, Supply Chain",Cognite,skipped,external apply
+2026-08-13 08:00:06.505445,naukri,Artificial Intelligence (AI) Engineer,TransOrg,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.521943,naukri,Software Engineer,Alchelyst,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.535993,naukri,Data Scientist & AI Developer,TE Connectivity,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.545505,naukri,Lead Data Product Management Consultant,Wells Fargo,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.560506,naukri,Python Full Stack Engineer (Developer),Nasu Group,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.568891,naukri,S2R_DNA_STIBO MDM Professional,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.579645,naukri,IDMC Developer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.590174,naukri,Staff Software Engineer,Mojro Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.599424,naukri,Data Scientist (Computer Vision),Fractal Analytics,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:06.609380,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-13 08:00:15.492236,naukri,Advanced Data Engineer,Sparta Systems,skipped,external apply
+2026-08-13 08:00:18.278264,naukri,Consultant - Data Engineer,HCA Healthcare Uk,skipped,external apply
+2026-08-13 08:00:20.991644,naukri,Data Engineer,Business Brio,skipped,external apply
+2026-08-13 08:00:34.611138,naukri,Data Engineer,Aelius Consultants,applied,
+2026-08-13 08:00:49.453756,naukri,Data Engineer,Tristha Global,skipped,external apply
+2026-08-13 08:00:52.101273,naukri,Data Engineer,Shyftlabs,skipped,external apply
+2026-08-13 08:00:54.921544,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:01:11.231661,naukri,Data Engineer-Web Scraping,Vanguard Hr Associates,applied,
+2026-08-13 08:01:25.984168,naukri,Data Engineer,EY,skipped,external apply
+2026-08-13 08:01:28.538971,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:01:31.120130,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:01:33.971350,naukri,Data Engineer - Apache Spark,Cisco,skipped,external apply
+2026-08-13 08:01:36.709555,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:03:43.997600,naukri,Data Engineer,DISH Network Technologies,skipped,no response for options question: How many years of experience do you have as Data Engineer ?
+2026-08-13 08:03:46.960452,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:03:51.177278,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:03:54.825719,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:06:00.350230,naukri,Data Engineer,Shyftlabs,skipped,no response for options question: How many years of experience do you have in Python ?
+2026-08-13 08:06:03.241105,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:06:06.846649,naukri,Data Engineer - Accelerators & Frameworks,Anblicks Solutions,skipped,external apply
+2026-08-13 08:08:19.173506,naukri,GCP Data Engineer,Allegis Group,skipped,no response for options question: How many years of experience do you have as a GCP Data Engineer
+2026-08-13 08:08:38.171271,naukri,Data Engineer (Data Bricks)-Developer,Nasu Group,applied,
+2026-08-13 08:09:04.047742,naukri,Data Engineer (Snowflake)-Developer,Nasu Group,applied,
+2026-08-13 08:09:18.962049,naukri,Azure Data Engineer,Paltech,skipped,external apply
+2026-08-13 08:09:22.277939,naukri,Senior Data Engineer,Crisil,skipped,external apply
+2026-08-13 08:09:25.333795,naukri,Data Engineer II,Swiss Re,skipped,external apply
+2026-08-13 08:09:28.560492,naukri,Data Engineer II,Hackerrank,skipped,external apply
+2026-08-13 08:09:32.593234,naukri,Data Engineer- Databricks + AWS,InfoCepts,skipped,external apply
+2026-08-13 08:09:36.466283,naukri,"Consultant/Sr. Consultant, Consumer Analytics Data Engineering",Eli Lilly And Company,skipped,external apply
+2026-08-13 08:09:39.473554,naukri,Senior Data Engineer,Taylor & Francis,skipped,external apply
+2026-08-13 08:09:53.293425,naukri,Data Engineer (Snowflake)-Jr. Engineer,Nasu Group,applied,
+2026-08-13 08:10:37.715103,naukri,Data Engineer/Sr. Engineer,Populace World Solutions Pune,uncertain,couldn't confirm submission — screenshot saved to debug_screenshots\Data_Engineer_Sr__Engineer_20260813_081026.png
+2026-08-13 08:10:52.466136,naukri,Senior Data Engineer,Serko,skipped,external apply
+2026-08-13 08:11:05.782096,naukri,Data Engineer (Data Bricks)-Jr Engineer,Nasu Group,applied,
+2026-08-13 08:11:17.796427,naukri,Data and AI Engineer,Philips,skipped,title doesn't match role keywords (Data Engineer)
+2026-08-13 08:11:20.614442,naukri,Senior Data Engineer,Canalys,skipped,external apply
+2026-08-13 08:11:24.117203,naukri,Senior Data Engineer,Informa Connect,skipped,external apply
+2026-08-13 08:11:27.135792,naukri,Associate III - Data Engineering,UST,skipped,external apply
+2026-08-13 08:11:30.201121,naukri,GCP Data Engineer,Kooe,skipped,external apply
+2026-08-13 08:11:33.114334,naukri,"Senior/ Data Engineer - Integration Lead, Supply Chain",Cognite,skipped,external apply
+2026-08-13 08:11:45.695791,naukri,Consultant - Data Engineer,HCA Healthcare Uk,skipped,external apply
+2026-08-13 08:11:49.867024,naukri,Data Engineer II,Swiss Re,skipped,external apply
+2026-08-13 08:11:49.897993,naukri,BI Developer,BEHR,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-13 08:11:49.944997,naukri,Analytics Engineer II,Swiss Re,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-13 08:11:54.174914,naukri,Data Engineer,Tristha Global,skipped,external apply
+2026-08-13 08:11:57.838939,naukri,Data Engineer,Shyftlabs,skipped,external apply
+2026-08-13 08:12:01.923291,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:12:05.693572,naukri,Data Engineer,EY,skipped,external apply
+2026-08-13 08:12:08.956981,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:12:12.655968,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:12:15.610820,naukri,Data Engineer - Apache Spark,Cisco,skipped,external apply
+2026-08-13 08:12:18.772739,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:12:21.904615,naukri,Microsoft Fabric / Power BI Solutions Engineer,Netsity Systems,skipped,external apply
+2026-08-13 08:12:24.690420,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:12:27.730684,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:12:30.766814,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:14:38.437423,naukri,Data Engineer,Easyrewardz Software Services,skipped,no response for options question: How many years of experience do you have in Python ?
+2026-08-13 08:16:44.468738,naukri,Data Engineer,Shyftlabs,skipped,no response for options question: How many years of experience do you have in Python ?
+2026-08-13 08:16:47.226974,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-13 08:17:00.423113,naukri,Master Data Management,Ascendion Engineering,applied,
+2026-08-13 08:17:22.302917,naukri,Advanced Data Engineer,Sparta Systems,skipped,external apply
+2026-08-13 08:17:35.862034,naukri,Databricks Engineer,Ajanta Pharma,applied,
+2026-08-13 08:19:19.395652,naukri,Data Engineer,DISH Network Technologies,applied,
+2026-08-13 08:19:34.166029,naukri,Data Analyst,Metropolis Healthcare,skipped,external apply
+2026-08-13 08:19:47.874202,naukri,Data Analyst,Ecolab Global Services,applied,
+2026-08-13 08:20:02.896551,naukri,Data Scientist/Software Developer,Xylem Water Solutions,skipped,external apply
+2026-08-13 08:20:16.394455,naukri,Data Analyst,Ecolab Global Services,applied,
+2026-08-13 08:20:31.801991,naukri,"Staff Data Scientist 1 - Machine Learning,Deep Learning,Python",Blue Yonder,skipped,external apply
+2026-08-13 08:20:31.810207,naukri,Rust Engineer,Thiran Traction Infotech,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-13 08:20:34.986853,naukri,AI Data Scientist,Amgen Inc,skipped,external apply
+2026-08-13 08:20:37.806696,naukri,Data and AI Engineer,Philips,skipped,external apply
+2026-08-13 08:20:40.525090,naukri,ExcelHer - Data Analysis Engineer,Volvo Group,skipped,external apply
+2026-08-13 08:20:53.740706,naukri,Jr Data Architect,Nasu Group,applied,
+2026-08-13 08:21:09.137429,naukri,Data Architect- AEP,Allime Tech Solutions,skipped,external apply
+2026-08-13 08:21:57.860677,naukri,Data Scientist,SAM Manpower & Career Services,applied,
+2026-08-13 08:22:13.117692,naukri,Data Analyst-Tableu,Zorba Ai,skipped,external apply
+2026-08-13 08:22:27.807870,naukri,Data Scientist & AI Developer,TE Connectivity,applied,
+2026-08-14 01:42:10.110233,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:42:10.122435,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:42:12.818147,naukri,Azure Data Engineer,Paltech,skipped,external apply
+2026-08-14 01:42:12.825154,naukri,MLOps Engineer,Qloron Technology,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:12.831148,naukri,Junior Data Scientist,infinites HR Services,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:30.496462,naukri,Azure Databricks -24th Mar (Tuesday)- Virtual Interview,Tata Consultancy Services,skipped,"unexpected error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+2026-08-14 01:42:30.501459,naukri,Snowflake Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:42:30.508462,naukri,Snowflake Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:42:30.514462,naukri,Snowflake Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:42:30.522466,naukri,Databricks(2-5 yrs)-Pan India,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:43.883997,naukri,Financial Reporting Data engineer,Honeybee Tech Solutions,applied,
+2026-08-14 01:42:58.648785,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:42:58.654782,naukri,Commercial Senior DataEngineer,Honeybee Tech Solutions,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:58.662777,naukri,Palantir Foundry Developer,Code Vyasa,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:58.670779,naukri,BI Engineer,Codincity Digital Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:58.677776,naukri,Data Analyst,Qualitest,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:58.686779,naukri,Data Analyst-Analyst,FedEx,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:58.692779,naukri,Datadog Engineer,Techstar Group,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:58.699778,naukri,Java Spring Boot Developer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:42:58.704777,naukri,LLM Engineer,ZS,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:15.767386,naukri,"Data Engineer – SSAS, SQL, DAX",Sketch Lighting,applied,
+2026-08-14 01:43:27.774470,naukri,Junior Extract-Transform-Load,Aditya Birla Insulators,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.779480,naukri,Associate Engineer,Milestone Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.784483,naukri,"Staff Data Scientist 1 - Machine Learning,Deep Learning,Python",Blue Yonder,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.791512,naukri,AI & Data Platform Engineer,SOBHA,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.797496,naukri,Java Developer-Azure Cloud,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.805022,naukri,Site Reliability Engineer (GCP DevOps),66degrees,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.812021,naukri,QA Backend Professional -SQL - ETL,Relq Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.817022,naukri,ETL Developer,Gedu Services,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.825024,naukri,BI Engineering Senior Analyst,Accenture,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.831022,naukri,SSIS Developer,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.837020,naukri,Python AI Engineer,Soliton Technologies,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.844020,naukri,Senior Associate,PwC Service Delivery Center,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.850021,naukri,AI/ML Developer (LLMs & Prompt Engineering) – Python & AI,Razorthink,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.855019,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.861022,naukri,Python Software Developer-S,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.866030,naukri,Site Reliability Engineer (GCP),66degrees,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.874020,naukri,Senior Gen AI Engineer,Soothsayer Analytics,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.880029,naukri,Python Developer | GenAI | LLM | RAG,Infosys,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:27.886021,naukri,Gen AI Developer,Capgemini,skipped,title doesn't match role keywords (Azure Data Engineer)
+2026-08-14 01:43:31.460566,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:43:34.058545,naukri,Advanced Data Engineer,Sparta Systems,skipped,external apply
+2026-08-14 01:43:36.549922,naukri,Advanced Data Engineer,Sparta Systems,skipped,external apply
+2026-08-14 01:43:36.558716,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:43:39.050037,naukri,Data Engineer,Barclays,skipped,external apply
+2026-08-14 01:43:41.506181,naukri,Data Engineer,Tristha Global,skipped,external apply
+2026-08-14 01:43:43.966740,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:43:46.413261,naukri,Data Engineer - Kanini,Technogen India,skipped,external apply
+2026-08-14 01:43:49.202737,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:43:51.739749,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:43:54.234099,naukri,Data Engineer - Apache Spark,Cisco,skipped,external apply
+2026-08-14 01:43:56.840426,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:43:59.283098,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:44:01.779552,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:44:04.289793,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:44:06.783479,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:44:09.644938,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:44:12.116472,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:44:14.580531,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:44:17.087492,naukri,Data Engineer - Accelerators & Frameworks,Anblicks Solutions,skipped,external apply
+2026-08-14 01:44:33.920484,naukri,"Data Engineer - SSAS, SQL, DAX",Sketch Lighting,applied,
+2026-08-14 01:44:45.928151,naukri,Aws Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:44:45.934166,naukri,Aws Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:44:59.164336,naukri,Data Engineer / Data Modeler_7+Years,Sketch Lighting,applied,
+2026-08-14 01:45:11.177461,naukri,PySpark Data engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:11.182472,naukri,GCP BigQuery Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:11.189473,naukri,Snowflake Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:11.198010,naukri,Snowflake Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:11.207009,naukri,Snowflake Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:13.926381,naukri,Data Engineer,Business Brio,skipped,external apply
+2026-08-14 01:45:13.933821,naukri,GCP BigQuery Data Engineer (2-3),Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:26.821948,naukri,Data Engineer-Pyspark,Tier1,applied,
+2026-08-14 01:45:41.482822,naukri,Data Engineer,Shyftlabs,skipped,external apply
+2026-08-14 01:45:41.487835,naukri,Aws Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:41.494823,naukri,Aws Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:45:54.599455,naukri,GCP Data Engineer,Tech Holding,applied,
+2026-08-14 01:46:06.606631,naukri,GCP BigQuery Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:46:33.329159,naukri,GCP Data Engineer,Allegis Group,applied,
+2026-08-14 01:46:45.334753,naukri,Data and AI Engineer,Philips,skipped,title doesn't match role keywords (Data Engineer)
+2026-08-14 01:46:45.340271,naukri,GCP BigQuery Data Engineer( 3-5),Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:46:49.677343,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:46:49.682349,naukri,Databricks Data Engineer,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:46:49.689345,naukri,BI Developer,BEHR,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:46:49.697344,naukri,BI Engineer I,Verisk,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:05.571391,naukri,AI & Data Platform Engineer,SOBHA,applied,
+2026-08-14 01:47:21.426840,naukri,Senior Engineer - ML and Data,Coretek Services India,skipped,external apply
+2026-08-14 01:47:21.431840,naukri,ETL Developer,Gedu Services,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:23.918599,naukri,Microsoft Fabric / Power BI Solutions Engineer,Netsity Systems,skipped,external apply
+2026-08-14 01:47:26.358986,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:47:26.365145,naukri,BI Engineering Senior Analyst,Accenture,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:28.807661,naukri,Data Platform Engineer,Accenture,skipped,external apply
+2026-08-14 01:47:41.895876,naukri,Power BI Developer - Microsoft Fabric,Mach 1 Global Supply Chain Services,applied,
+2026-08-14 01:47:53.904949,naukri,Senior AI Engineer,Equifax,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:57.875516,naukri,Data Analyst,Qualitest,skipped,external apply
+2026-08-14 01:47:57.880509,naukri,SQL Developer,Ascendion Engineering,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:57.885513,naukri,Senior Associate,PwC Service Delivery Center,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:57.890513,naukri,EY - GDS Consulting - AIA - Agentic AI - Senior Professional,EY,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:57.896518,naukri,.Net Developer,Ascendion Engineering,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:57.902511,naukri,VAPT-DevSecops Experts(Individual contributor),Anaplan,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:47:57.907510,naukri,Mid AS400 Developer,Ascendion Engineering,skipped,title doesn't match role keywords (Fabric Data Engineer)
+2026-08-14 01:48:04.496524,naukri,Advanced Data Engineer,Sparta Systems,skipped,external apply
+2026-08-14 01:48:06.931412,naukri,Advanced Data Engineer,Sparta Systems,skipped,external apply
+2026-08-14 01:48:09.389494,naukri,Data Engineer,Business Brio,skipped,external apply
+2026-08-14 01:48:11.831232,naukri,Data Engineer,Barclays,skipped,external apply
+2026-08-14 01:48:14.286191,naukri,Data Engineer,Tristha Global,skipped,external apply
+2026-08-14 01:48:16.733576,naukri,Data Engineer,Shyftlabs,skipped,external apply
+2026-08-14 01:48:19.263695,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:21.725325,naukri,Data Engineer - Kanini,Technogen India,skipped,external apply
+2026-08-14 01:48:24.196117,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:26.679535,naukri,Data and AI Engineer,Philips,skipped,external apply
+2026-08-14 01:48:29.118139,naukri,Data Engineer - Apache Spark,Cisco,skipped,external apply
+2026-08-14 01:48:31.578861,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:34.012437,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:36.452840,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:38.919432,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:41.363757,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:43.813985,naukri,Data Engineer,Accenture,skipped,external apply
+2026-08-14 01:48:46.283234,naukri,Data Engineer - Accelerators & Frameworks,Anblicks Solutions,skipped,external apply
+2026-08-14 01:48:48.741870,naukri,Cybersecurity Data/ Detection/ Implementation Engineer,Netenrich Technologies,skipped,external apply
+2026-08-14 01:48:51.279741,naukri,Cybersecurity Data/ Detection/ Implementation Engineer,Netenrich Technologies,skipped,external apply
+2026-08-14 01:48:55.002321,naukri,Associate Engineer,Milestone Technologies,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:48:57.428295,naukri,ETL Developer(Informatica & IDMC),Zensar,skipped,external apply
+2026-08-14 01:48:57.433097,naukri,Data Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:42.296518,naukri,ETL Developer,Gedu Services,applied,
+2026-08-14 01:49:54.301990,naukri,BI Engineering Senior Analyst,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.305516,naukri,Database Developer,ITLPro Solutions,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.310520,naukri,Data Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.318517,naukri,Informatica Power Center Developer / Senior Developer,Shashwath Solution,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.324517,naukri,Palantir Foundry Developer,Code Vyasa,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.329517,naukri,Etl Tester_All Locations_SD,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:49:54.335515,naukri,Palantir Foundry Developer,Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.340525,naukri,Palantir Foundry Developer,Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.344527,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:49:54.351060,naukri,Opening For Celonis Developer with CMMI Level 5 in Mumbai location,Quess Corp Limited,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:10.150949,naukri,Job Opening _ ETL Testing (Automation+Manual)_Only Immediate To 15 Day,Tech Mahindra,applied,
+2026-08-14 01:50:22.156301,naukri,S2R_DNA_STIBO MDM Professional,Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:22.160824,naukri,Informatica MDM Admin,Unionsys Technologies,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:22.169828,naukri,Etl Tester_Hyderabad,Infosys,skipped,company excluded (Infosys)
+2026-08-14 01:50:22.175828,naukri,Palantir Developer,Techstar Group,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:22.184836,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:26.471845,naukri,BI Developer,BEHR,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:29.116052,naukri,PPCR Data Integration Developer,Barclays,skipped,external apply
+2026-08-14 01:50:29.122051,naukri,GCP BigQuery Developer,Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:29.127053,naukri,BI Engineer I,Verisk,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:29.136306,naukri,Python - Data Processing Professional,Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:29.143051,naukri,SSIS Developer,Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:29.152134,naukri,Data Platform & Integration Engineer,ExxonMobil,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:50:55.732048,naukri,Etl Tester,Cloudxtreme,applied,
+2026-08-14 01:51:07.746686,naukri,"Informatica PowerCenter, IICS, IDQ, EDC Administration Professional",Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.754701,naukri,SQL Developer,Paix Services,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.760699,naukri,SQL Developer,Ascendion Engineering,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.767701,naukri,Software Developer,Nagarro,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.773698,naukri,Required SIX Essential NEEDS.,Global opportunity,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.781699,naukri,Reltio MDM Developer,Innova Solutions,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.787712,naukri,Veeva Network Developer,CareerFit.ai,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.795734,naukri,IDMC Developer,Infosys,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.801268,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.807266,naukri,Custom Software Engineer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.813263,naukri,Application Developer,Accenture,skipped,title doesn't match role keywords (ETL Developer)
+2026-08-14 01:51:07.823268,naukri,"Hiring For ""Fullstack Developer"" For ASM Technologies",ASM Technologies,skipped,title doesn't match role keywords (ETL Developer)
