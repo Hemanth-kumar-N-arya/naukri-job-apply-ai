@@ -6,13 +6,17 @@
 6. optimising for external applying
 7. they are mutiple jobs but it has restricted to 20 it has to move to the next page and start applying so it shold move till last page and apply all the jobs
 8. optimising for using in phone
-9. uploading in git
 10. convert to apk
 11. usage of another AI instead of API key
 12. mark it has applied only after succesfully applied ,model as simply updatingf as applied, 
 13. and it not answering some question exampe date of birth etc, and it is updating wrong anwers to the chat.
 14. it simply closing if it doesn't know the answer and it is marking as applied in the log
 15. getting some page evalute error sometime, so use try and execpt method not to break the run.
+2\site-packages\playwright\_impl\_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.evaluate: Execution context was destroyed, most likely because of a navigation
+
 16. it failing to update the checkbox and radio button in the chat
 17. if it does.nt know the answer ask the user to imput via a inputbox and store the information for future use when there is in future that type of question are similar type of question is asked use that anser.
+hh
 
